@@ -1,0 +1,12 @@
+:root {
+  --crust: #232634;
+  --base: #303446;
+  --surface: #51576d;
+  --overlay: #737994;
+  --subtext: ;
+  --text: ;
+}
+
+body {
+  background-color: var(--crust);
+}
