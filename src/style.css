@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'carto-reg';
+  src: url('./metadata/font/CartographCF-Regular.ttf');
+}
+
 :root {
   --base: #303446;
   --surface: #51576d;
@@ -6,7 +11,112 @@
   --text: #c6d0f5;
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
+  font-family: 'carto-reg';
   background-color: var(--base);
   color: var(--text);
+  overflow: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+#tempSwitchBtn {
+  font-family: 'carto-reg';
+  font-size: 1rem;
+  padding: 6px 12px;
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--overlay);
+  border-radius: 12px;
+}
+#tempSwitchBtn:hover {
+  background-color: var(--overlay);
+}
+#tempSwitchBtn:active {
+  background-color: var(--surface);
+}
+.tempDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.tempDisplay .selected-temp {
+  font-size: 4rem;
+}
+.tempDisplay .other-temp {
+  font-size: 2rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+footer h1 {
+  margin-left: 24px;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 4rem;
+}
+footer .search {
+  margin-left: auto;
+  font-family: 'carto-reg';
+  font-size: 1rem;
+  padding: 6px 12px;
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--overlay);
+  border-radius: 12px;
+}
+footer .search::placeholder {
+  color: var(--text); 
+}
+footer button[type="submit"] {
+  margin-right: 24px;
+  font-family: 'carto-reg';
+  font-size: 1rem;
+  padding: 6px 12px;
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--overlay);
+  border-radius: 12px;
+}
+button[type="submit"]:hover {
+  background-color: var(--overlay);
+}
+button[type="submit"]:active {
+  background-color: var(--surface);
+}
+
+
+@media screen and (max-width: 600px) {
+
+
+
 }
