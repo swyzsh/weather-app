@@ -13,13 +13,12 @@ let temp_c;
 let temp_f;
 let is_day;
 let text;
-let icon;
 
 const API_KEY = "246e4620ea1644eeba4154724240406";
 
 async function getData() {
   try {
-    const requestURL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${currentLocation}`;
+    const requestURL = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${currentLocation}`;
     const response = await fetch(requestURL);
     
     if (!response.ok) {
